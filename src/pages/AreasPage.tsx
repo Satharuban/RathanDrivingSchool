@@ -24,7 +24,7 @@ export function AreasPage() {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600"
           >
-            We teach across Greater Manchester and surrounding boroughs. Local knowledge means we know the test routes and busy streets — so you learn where it matters.
+            We teach across Liverpool and Merseyside. Local knowledge means we know the test routes and busy streets — so you learn where it matters.
           </motion.p>
         </div>
       </section>
@@ -32,7 +32,7 @@ export function AreasPage() {
         <div className="container-narrow">
           <SectionHeading
             title="Coverage map"
-            subtitle="Manchester, Salford, Trafford, Stockport and more. If your area isn't listed, get in touch with your postcode."
+            subtitle="Liverpool, Wirral, Sefton, Knowsley and more. If your area isn't listed, get in touch with your postcode."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {AREAS_COVERED.map((area, i) => (

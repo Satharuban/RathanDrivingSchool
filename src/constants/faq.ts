@@ -18,7 +18,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'areas',
     question: 'Which areas do you cover?',
-    answer: 'We cover Greater Manchester and surrounding areas including Manchester, Salford, Trafford, Stockport, Tameside, Oldham, Bolton, Bury, Rochdale, and Wigan. If you\'re unsure, send us your postcode and we\'ll confirm.',
+    answer: 'We cover Liverpool and Merseyside including Liverpool, Wirral, Sefton, Knowsley, St Helens, Halton and West Lancashire. If you\'re unsure, send us your postcode and we\'ll confirm.',
   },
   {
     id: 'intensive',

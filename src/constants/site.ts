@@ -1,8 +1,12 @@
 export const SITE_NAME = "Rathan's Driving School";
 export const SITE_TAGLINE = 'Pass Faster with Professional Driving Lessons';
 
-export const WHATSAPP_NUMBER = '447700900000'; // Replace with real number
+export const WHATSAPP_NUMBER = '447904960577';
 export const WHATSAPP_MESSAGE = "Hi, I'm interested in driving lessons. Can you share availability and prices?";
+
+/** Display and tel: link — UK format */
+export const PHONE_NUMBER = '+44 7904 960577';
+export const PHONE_HREF = 'tel:+447904960577';
 
 /** Rathan's Driving School Facebook page */
 export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61558641268583';

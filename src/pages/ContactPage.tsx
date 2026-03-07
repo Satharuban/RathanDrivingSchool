@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MessageCircle, Facebook, Youtube } from 'lucide-react';
 import { ContactForm } from '../components/forms/ContactForm';
 import { openWhatsApp } from '../utils/whatsapp';
-import { FACEBOOK_URL, YOUTUBE_URL } from '../constants/site';
+import { FACEBOOK_URL, YOUTUBE_URL, PHONE_NUMBER, PHONE_HREF } from '../constants/site';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 export function ContactPage() {
@@ -41,13 +41,13 @@ export function ContactPage() {
               <ul className="mt-6 space-y-4">
                 <li>
                   <a
-                    href="tel:07700900000"
+                    href={PHONE_HREF}
                     className="flex items-center gap-3 rounded-xl border border-neutral-200 p-4 transition-colors hover:bg-neutral-50"
                   >
                     <span className="rounded-lg bg-neutral-100 p-2 text-neutral-600">
                       <Phone className="h-5 w-5" />
                     </span>
-                    <span className="font-medium text-black">07700 900000</span>
+                    <span className="font-medium text-black">{PHONE_NUMBER}</span>
                   </a>
                 </li>
                 <li>

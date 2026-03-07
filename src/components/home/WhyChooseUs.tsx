@@ -37,7 +37,7 @@ const items = [
     id: 'local',
     icon: MapPin,
     title: 'Local area expertise',
-    description: 'We know Manchester, Salford, Trafford, Stockport and surrounding areas — including test routes.',
+    description: 'We know Liverpool, Wirral, Sefton, Knowsley and surrounding areas — including test routes.',
   },
 ];
 

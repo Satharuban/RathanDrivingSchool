@@ -12,7 +12,7 @@ export function AreasCoveredSection() {
         <SectionHeading
           eyebrow="Coverage"
           title="Areas we cover"
-          subtitle="We teach across Greater Manchester and surrounding areas. Local knowledge means better test preparation."
+          subtitle="We teach across Liverpool and Merseyside. Local knowledge means better test preparation."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {displayAreas.map((area, i) => (

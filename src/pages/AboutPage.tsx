@@ -45,7 +45,7 @@ export function AboutPage() {
               About Rathan Driving School
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-neutral-600">
-              We're a local driving school serving Greater Manchester with one goal: to get you driving safely and confidently. Whether you're a complete beginner or need a refresher, we're here to help.
+              We're a local driving school based in Liverpool, serving Merseyside with one goal: to get you driving safely and confidently. Whether you're a complete beginner or need a refresher, we're here to help.
             </p>
           </motion.div>
         </div>
@@ -83,7 +83,7 @@ export function AboutPage() {
               Manual & automatic · Beginners to test-ready · Flexible times
             </h2>
             <p className="mt-4 text-neutral-600">
-              Get in touch to book your first lesson or ask any questions. We cover Manchester, Salford, Trafford, Stockport and surrounding areas.
+              Get in touch to book your first lesson or ask any questions. We cover Liverpool, Wirral, Sefton, Knowsley and surrounding areas.
             </p>
           </div>
         </div>

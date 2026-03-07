@@ -21,9 +21,6 @@ export function HowItWorks() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="relative"
             >
-              {i < HOW_IT_WORKS.length - 1 && (
-                <div className="absolute left-8 top-14 hidden h-[2px] w-[calc(100%-4rem)] bg-neutral-200 lg:block" />
-              )}
               <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-red font-display text-lg font-bold text-white">
                   {step.step}

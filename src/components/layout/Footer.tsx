@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Youtube } from 'lucide-react';
-import { NAV_LINKS, SITE_NAME, FACEBOOK_URL, YOUTUBE_URL } from '../../constants/site';
+import { NAV_LINKS, SITE_NAME, FACEBOOK_URL, YOUTUBE_URL, PHONE_NUMBER, PHONE_HREF } from '../../constants/site';
 import { AREAS_COVERED } from '../../constants/areas';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
 
@@ -15,7 +15,7 @@ export function Footer() {
               {SITE_NAME}
             </Link>
             <p className="mt-3 text-sm">
-              Professional driving lessons across Greater Manchester. Manual & automatic, beginners to test-ready.
+              Professional driving lessons across Liverpool and Merseyside. Manual & automatic, beginners to test-ready.
             </p>
             <div className="mt-4 flex flex-wrap items-center gap-4">
               <a
@@ -64,9 +64,9 @@ export function Footer() {
             <h3 className="font-display font-semibold text-white">Contact</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a href="tel:07700900000" className="flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus-visible:underline">
+                <a href={PHONE_HREF} className="flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus-visible:underline">
                   <Phone className="h-4 w-4 shrink-0" aria-hidden />
-                  07700 900000
+                  {PHONE_NUMBER}
                 </a>
               </li>
               <li>
@@ -77,7 +77,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-                <span>Greater Manchester, UK</span>
+                <span>Liverpool, UK</span>
               </li>
             </ul>
           </div>

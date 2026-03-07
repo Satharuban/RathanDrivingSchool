@@ -23,7 +23,7 @@ export function ReviewsPage() {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600"
           >
-            Real reviews from learners across Greater Manchester who passed with us. Manual, automatic, intensive and refresher — we're proud of every one.
+            Real reviews from learners across Liverpool and Merseyside who passed with us. Manual, automatic, intensive and refresher — we're proud of every one.
           </motion.p>
         </div>
       </section>

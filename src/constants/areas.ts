@@ -6,43 +6,38 @@ export interface Area {
 
 export const AREAS_COVERED: Area[] = [
   {
-    id: 'manchester',
-    name: 'Manchester',
+    id: 'liverpool',
+    name: 'Liverpool',
     description: 'City centre and suburbs. We know the test routes and busy streets so you learn where it matters.',
   },
   {
-    id: 'salford',
-    name: 'Salford',
-    description: 'Salford Quays, MediaCityUK, and residential areas. Local test centre expertise.',
+    id: 'wirral',
+    name: 'Wirral',
+    description: 'Birkenhead, Wallasey, Heswall and across the peninsula. Local test centre expertise.',
   },
   {
-    id: 'trafford',
-    name: 'Trafford',
-    description: 'Trafford Park, Stretford, Sale, Altrincham. Ideal for test preparation in the area.',
+    id: 'sefton',
+    name: 'Sefton',
+    description: 'Southport, Crosby, Formby and surrounding areas. Ideal for test preparation.',
   },
   {
-    id: 'stockport',
-    name: 'Stockport',
-    description: 'Stockport town and surrounding districts. We cover the test routes regularly.',
+    id: 'knowsley',
+    name: 'Knowsley',
+    description: 'Kirkby, Huyton, Prescot and nearby. Flexible pick-up points.',
   },
   {
-    id: 'tameside',
-    name: 'Tameside',
-    description: 'Ashton-under-Lyne, Hyde, Stalybridge and nearby. Flexible pick-up points.',
+    id: 'st-helens',
+    name: 'St Helens',
+    description: 'St Helens town and outskirts. Patient instruction for all levels.',
   },
   {
-    id: 'oldham',
-    name: 'Oldham',
-    description: 'Oldham town centre and outskirts. Patient instruction for all levels.',
+    id: 'halton',
+    name: 'Halton',
+    description: 'Widnes and Runcorn. Manual and automatic lessons available.',
   },
   {
-    id: 'bolton',
-    name: 'Bolton',
-    description: 'Bolton and surrounding areas. Manual and automatic lessons available.',
-  },
-  {
-    id: 'bury',
-    name: 'Bury',
-    description: 'Bury, Prestwich, Radcliffe. We work around your schedule.',
+    id: 'west-lancs',
+    name: 'West Lancashire',
+    description: 'Skelmersdale, Ormskirk and surrounding areas. We work around your schedule.',
   },
 ];
