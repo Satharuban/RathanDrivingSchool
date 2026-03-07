@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased text-neutral-700 bg-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight text-black;
+  }
+  /* Readable line length for intro/paragraph blocks */
+  .prose-width {
+    max-width: 65ch;
+  }
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 min-h-[44px] rounded-xl bg-brand-red px-6 py-3.5 font-semibold text-white shadow-lg shadow-brand-red/25 transition-all duration-200 hover:bg-brand-red-hover hover:shadow-brand-red/30 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 min-h-[44px] rounded-xl border-2 border-black bg-transparent px-6 py-3.5 font-semibold text-black transition-all duration-200 hover:bg-black hover:text-white active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-600 focus-visible:ring-offset-2;
+  }
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+  .container-narrow {
+    @apply max-w-6xl mx-auto w-full;
+  }
+  .bg-pattern-dots {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .skip-link {
+    @apply absolute left-4 -top-16 z-[100] rounded-lg bg-black px-4 py-2 text-sm font-medium text-white transition-all focus:top-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
+  .card-elevated {
+    @apply rounded-2.5xl border border-neutral-200/80 bg-white shadow-card;
+  }
+  .bg-pattern-grid {
+    background-image: linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
