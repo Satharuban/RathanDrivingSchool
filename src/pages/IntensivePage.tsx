@@ -63,7 +63,7 @@ export function IntensivePage() {
                 ))}
               </ul>
               <p className="mt-8 text-neutral-600">
-                Packages start from £299 depending on course length and whether a test is included. Contact us with your availability and we'll put together a quote.
+                Contact us with your availability and we'll put together a quote for a course that suits you.
               </p>
             </motion.div>
             <motion.div

@@ -26,7 +26,7 @@ export function Navbar() {
     >
       <nav className="container-narrow section-padding flex items-center justify-between py-4" aria-label="Main">
         <Link to="/" className="flex items-center gap-3 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2">
-          <img src="/logo.png" alt={SITE_NAME} className="h-10 w-auto sm:h-12" />
+          <img src="/logo.png" alt={SITE_NAME} className="h-10 w-auto sm:h-12 mix-blend-darken" />
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex" role="list">

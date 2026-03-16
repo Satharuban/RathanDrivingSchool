@@ -8,12 +8,12 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'automatic',
     question: 'Do you offer automatic lessons?',
-    answer: 'Yes. We offer both manual and automatic lessons. Automatic lessons are popular with learners who want to focus on road craft without worrying about gears. Prices start from £38 per hour for automatic.',
+    answer: 'Yes. We offer both manual and automatic lessons. Automatic lessons are popular with learners who want to focus on road craft without worrying about gears. Get in touch for availability.',
   },
   {
     id: 'cost',
     question: 'How much do lessons cost?',
-    answer: 'Our standard manual and beginner lessons start from £35 per hour. Automatic lessons are from £38 per hour. Block bookings of 10 or 20 hours offer a discount. Intensive course packages start from £299. Get in touch for a tailored quote.',
+    answer: 'We offer single lessons, block bookings of 10 or 20 hours, and intensive course packages. Get in touch for a tailored quote and current availability.',
   },
   {
     id: 'areas',

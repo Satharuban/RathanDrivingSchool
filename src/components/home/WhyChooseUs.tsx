@@ -24,8 +24,8 @@ const items = [
   {
     id: 'prices',
     icon: PoundSterling,
-    title: 'Competitive prices',
-    description: 'Clear pricing with no hidden fees. Block bookings save you more, and we offer intensive course packages.',
+    title: 'Clear options',
+    description: 'Single lessons, block bookings, and intensive courses. No hidden fees — we’ll find an option that suits you.',
   },
   {
     id: 'pass',

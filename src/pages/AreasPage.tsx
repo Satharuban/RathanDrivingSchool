@@ -10,22 +10,36 @@ export function AreasPage() {
   return (
     <>
       <section className="section-padding bg-gradient-to-b from-neutral-50 to-white pt-16">
-        <div className="container-narrow text-center">
-          <motion.h1
+        <div className="container-narrow">
+          <div className="text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="font-display text-4xl font-extrabold tracking-tight text-black sm:text-5xl"
+            >
+              Areas we cover
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600"
+            >
+              We teach across Liverpool and Merseyside. Local knowledge means we know the test routes and busy streets — so you learn where it matters.
+            </motion.p>
+          </div>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-display text-4xl font-extrabold tracking-tight text-black sm:text-5xl"
+            transition={{ delay: 0.2 }}
+            className="mt-10 rounded-2xl overflow-hidden border border-neutral-200 shadow-md"
           >
-            Areas we cover
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600"
-          >
-            We teach across Liverpool and Merseyside. Local knowledge means we know the test routes and busy streets — so you learn where it matters.
-          </motion.p>
+            <img
+              src="/areas-liverpool-coverage.png"
+              alt="Liverpool and Merseyside coverage area"
+              className="w-full aspect-[16/9] object-cover"
+            />
+          </motion.div>
         </div>
       </section>
       <section className="section-padding bg-white">

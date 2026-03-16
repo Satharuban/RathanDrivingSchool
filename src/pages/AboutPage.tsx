@@ -47,6 +47,18 @@ export function AboutPage() {
             <p className="mt-6 text-lg leading-relaxed text-neutral-600">
               We're a local driving school based in Liverpool, serving Merseyside with one goal: to get you driving safely and confidently. Whether you're a complete beginner or need a refresher, we're here to help.
             </p>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="mt-10 mx-auto max-w-2xl rounded-2xl overflow-hidden border border-neutral-200 shadow-lg"
+            >
+              <img
+                src="/about-instructor.png"
+                alt="Professional driving instructor and learner"
+                className="w-full aspect-[4/3] object-cover"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </section>

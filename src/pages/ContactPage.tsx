@@ -24,7 +24,7 @@ export function ContactPage() {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600"
           >
-            Fill in the form below or get in touch by phone, WhatsApp, Facebook, or YouTube. We'll get back to you quickly with availability and prices.
+            Fill in the form below or get in touch by phone, WhatsApp, Facebook, or YouTube. We'll get back to you quickly with availability.
           </motion.p>
         </div>
       </section>
@@ -35,8 +35,15 @@ export function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="lg:col-span-2"
+              className="lg:col-span-2 space-y-6"
             >
+              <div className="rounded-2xl overflow-hidden border border-neutral-200 shadow-sm">
+                <img
+                  src="/contact-get-in-touch.png"
+                  alt="Get in touch with our driving school"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+              </div>
               <h2 className="font-display text-xl font-semibold text-black">Other ways to reach us</h2>
               <ul className="mt-6 space-y-4">
                 <li>

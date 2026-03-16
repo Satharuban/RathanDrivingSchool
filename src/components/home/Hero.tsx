@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, Shield, Clock, Car } from 'lucide-react';
 import { openWhatsApp } from '../../utils/whatsapp';
+import { HERO_HEADLINE } from '../../constants/site';
 
 const trustBadges = [
   { icon: Shield, text: 'DVSA-ready lessons' },
@@ -30,11 +31,6 @@ export function Hero() {
                 className="h-full w-full object-cover object-center"
               />
             </div>
-            <div className="mt-3 flex items-center justify-center gap-4 px-4 sm:px-0">
-              <span className="text-sm font-semibold text-black">From £35/hr</span>
-              <span className="text-neutral-400">·</span>
-              <span className="text-sm text-neutral-600">Block discounts</span>
-            </div>
           </motion.div>
 
           {/* Copy: same for mobile + desktop, order adjusted via grid */}
@@ -53,7 +49,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-4 font-display text-3xl font-extrabold leading-[1.15] tracking-tight text-black sm:mt-6 sm:text-4xl sm:leading-[1.1] lg:text-5xl xl:text-[3.5rem]"
             >
-              Pass Faster with Professional Driving Lessons
+              {HERO_HEADLINE}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -117,11 +113,11 @@ export function Hero() {
               </div>
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <div className="rounded-lg bg-neutral-50 p-4">
-                  <p className="font-semibold text-black">From £35/hr</p>
-                  <p className="text-xs text-neutral-500">Manual & beginner</p>
+                  <p className="font-semibold text-black">Manual & automatic</p>
+                  <p className="text-xs text-neutral-500">Beginner to test-ready</p>
                 </div>
                 <div className="rounded-lg bg-brand-green-light/40 p-4">
-                  <p className="font-semibold text-black">Block discounts</p>
+                  <p className="font-semibold text-black">Block bookings</p>
                   <p className="text-xs text-neutral-600">10 & 20 hour packs</p>
                 </div>
               </div>
