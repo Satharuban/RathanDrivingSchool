@@ -17,6 +17,9 @@ export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61558641268
 /** Rathan's Driving School YouTube channel */
 export const YOUTUBE_URL = 'https://www.youtube.com/@psivarathan9186';
 
+/** Rathan's Driving School Instagram */
+export const INSTAGRAM_URL = 'https://www.instagram.com/rathans_driving_school';
+
 export const NAV_LINKS = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },

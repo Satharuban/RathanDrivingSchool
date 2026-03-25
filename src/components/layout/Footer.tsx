@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Youtube } from 'lucide-react';
-import { NAV_LINKS, SITE_NAME, FACEBOOK_URL, YOUTUBE_URL, PHONE_NUMBER, PHONE_HREF } from '../../constants/site';
+import { Mail, Phone, MapPin, Facebook, Youtube, Instagram } from 'lucide-react';
+import { NAV_LINKS, SITE_NAME, FACEBOOK_URL, YOUTUBE_URL, INSTAGRAM_URL, PHONE_NUMBER, PHONE_HREF } from '../../constants/site';
 import { AREAS_COVERED } from '../../constants/areas';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
 
@@ -45,6 +45,16 @@ export function Footer() {
               >
                 <Youtube className="h-5 w-5" aria-hidden />
                 YouTube
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-neutral-400 transition-colors hover:text-white focus:outline-none focus-visible:underline"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="h-5 w-5" aria-hidden />
+                Instagram
               </a>
             </div>
           </div>
@@ -116,6 +126,16 @@ export function Footer() {
             >
               <Youtube className="h-4 w-4" aria-hidden />
               YouTube
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-neutral-500 transition-colors hover:text-white focus:outline-none focus-visible:underline"
+              aria-label="Rathan's Driving School on Instagram"
+            >
+              <Instagram className="h-4 w-4" aria-hidden />
+              Instagram
             </a>
           </div>
         </div>

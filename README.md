@@ -34,9 +34,24 @@ To handle submissions:
    ```bash
    cd server && npm install && npm start
    ```
-2. With both dev server and API running, form submissions will be received by the Express app (and can later be stored in PostgreSQL).
+2. With both dev server and API running, form submissions are saved to `server/data/enquiries.json`.
 
 For production, set `VITE_API_URL` to your backend base URL (e.g. `https://api.yoursite.com/api`).
+
+### Admin panel
+
+- **URL:** [http://localhost:5000/admin](http://localhost:5000/admin) (or your Vite port + `/admin`)
+- **Login:** [http://localhost:5000/admin/login](http://localhost:5000/admin/login)
+- **Default password (dev only):** `admin123` — change before production.
+
+Set environment variables on the server (see `server/.env.example`):
+
+| Variable | Purpose |
+|----------|---------|
+| `ADMIN_PASSWORD` | Password for admin sign-in |
+| `ADMIN_JWT_SECRET` | Secret used to sign session tokens (use a long random string in production) |
+
+The dashboard lists all contact-form enquiries (name, email, phone, postcode, lesson type, message, date). Use **Refresh** to reload; **Sign out** clears the session.
 
 ### WhatsApp
 

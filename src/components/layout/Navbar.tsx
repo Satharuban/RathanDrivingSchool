@@ -36,6 +36,7 @@ export function Navbar() {
               <li key={path}>
                 <Link
                   to={path}
+                  aria-current={isActive ? 'page' : undefined}
                   className={`relative block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 ${
                     isActive ? 'text-brand-red' : 'text-neutral-600 hover:text-black'
                   }`}
@@ -82,6 +83,7 @@ export function Navbar() {
                   <Link
                     to={path}
                     onClick={() => setOpen(false)}
+                    aria-current={location.pathname === path ? 'page' : undefined}
                     className={`block rounded-lg px-4 py-3.5 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-inset ${
                       location.pathname === path ? 'bg-brand-red-light text-brand-red' : 'text-neutral-700 hover:bg-neutral-50'
                     }`}

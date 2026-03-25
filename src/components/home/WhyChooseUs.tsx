@@ -41,9 +41,9 @@ const items = [
   },
 ];
 
-export function WhyChooseUs() {
+export function WhyChooseUs({ className = '' }: { className?: string }) {
   return (
-    <section className="section-padding bg-white">
+    <section className={`section-padding bg-white ${className}`.trim()}>
       <div className="container-narrow">
         <SectionHeading
           eyebrow="What we offer"
