@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 import { MessageCircle, Calendar, Phone, Shield, Car, Clock } from 'lucide-react';
+import { ResponsivePicture } from '../ui/ResponsivePicture';
 import { openWhatsApp } from '../../utils/whatsapp';
 import { HERO_HEADLINE, PHONE_HREF, PHONE_NUMBER, SITE_NAME } from '../../constants/site';
 
@@ -51,13 +52,14 @@ export function Hero() {
           <motion.div {...up(0.04)} className="order-1 lg:order-2">
             <div className="mx-auto max-w-md lg:mx-0 lg:max-w-none">
               <div className="overflow-hidden rounded-2xl bg-white shadow-soft-lg ring-1 ring-neutral-200/70 sm:rounded-3xl">
-                <img
-                  src="/rathan-car-hero.png"
-                  alt={`${SITE_NAME} — learner vehicle with roof sign`}
-                  className="aspect-[4/3] w-full object-cover object-[center_42%] sm:aspect-[5/4] sm:object-center lg:aspect-[4/3]"
-                  width={1200}
-                  height={900}
-                  fetchPriority="high"
+                <ResponsivePicture
+                  webpSrc="/rathan-car-hero.webp"
+                  fallbackSrc="/rathan-car-hero.png"
+                  alt={`${SITE_NAME} — learner vehicle with roof sign and L plates`}
+                  width={768}
+                  height={1024}
+                  priority
+                  className="aspect-[4/3] w-full object-cover object-center sm:aspect-[5/4] lg:aspect-[4/3]"
                 />
               </div>
               <p className="mt-4 text-center text-xs font-medium text-neutral-500 lg:text-left">

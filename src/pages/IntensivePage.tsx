@@ -3,7 +3,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { Calendar, Clock, CheckCircle2, Zap } from 'lucide-react';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { CTABanner } from '../components/ui/CTABanner';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { SITE_NAME } from '../constants/site';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -17,7 +16,6 @@ const benefits = [
 ];
 
 export function IntensivePage() {
-  usePageTitle('Intensive Courses');
   const reduceMotion = useReducedMotion();
   const up = (d = 0) =>
     reduceMotion

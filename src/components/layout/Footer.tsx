@@ -1,6 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Youtube, Instagram } from 'lucide-react';
-import { NAV_LINKS, SITE_NAME, FACEBOOK_URL, YOUTUBE_URL, INSTAGRAM_URL, PHONE_NUMBER, PHONE_HREF } from '../../constants/site';
+import {
+  NAV_LINKS,
+  SITE_NAME,
+  FACEBOOK_URL,
+  YOUTUBE_URL,
+  INSTAGRAM_URL,
+  PHONE_NUMBER,
+  PHONE_HREF,
+} from '../../constants/site';
+import { formatNapAddressLines } from '../../constants/businessAddress';
 import { AREAS_COVERED } from '../../constants/areas';
 import { getWhatsAppUrl } from '../../utils/whatsapp';
 
@@ -86,8 +95,14 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-                <span>Liverpool, UK</span>
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+                <span className="space-y-0.5">
+                  {formatNapAddressLines().map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </span>
               </li>
             </ul>
           </div>
@@ -99,6 +114,24 @@ export function Footer() {
                   <Link to="/areas" className="transition-colors hover:text-white focus:outline-none focus-visible:underline">{area.name}</Link>
                 </li>
               ))}
+            </ul>
+            <h3 className="mt-8 font-display font-semibold text-white">Local lesson pages</h3>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li>
+                <Link to="/driving-lessons-wavertree" className="transition-colors hover:text-white focus:outline-none focus-visible:underline">
+                  Driving lessons Wavertree
+                </Link>
+              </li>
+              <li>
+                <Link to="/driving-lessons-aigburth" className="transition-colors hover:text-white focus:outline-none focus-visible:underline">
+                  Driving lessons Aigburth
+                </Link>
+              </li>
+              <li>
+                <Link to="/driving-lessons-allerton" className="transition-colors hover:text-white focus:outline-none focus-visible:underline">
+                  Driving lessons Allerton
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

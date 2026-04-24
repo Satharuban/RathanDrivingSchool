@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { Award, Users, Car, Target, MapPin } from 'lucide-react';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { CTABanner } from '../components/ui/CTABanner';
-import { usePageTitle } from '../hooks/usePageTitle';
+import { ResponsivePicture } from '../components/ui/ResponsivePicture';
 import { SITE_NAME } from '../constants/site';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -41,7 +41,6 @@ const values = [
 ];
 
 export function AboutPage() {
-  usePageTitle('About Us');
   const reduceMotion = useReducedMotion();
   const up = (d = 0) =>
     reduceMotion
@@ -78,12 +77,13 @@ export function AboutPage() {
               <div className="mx-auto max-w-lg lg:mx-0 lg:max-w-none">
                 <div className="relative rounded-[1.25rem] bg-gradient-to-br from-neutral-200/70 via-white to-neutral-100 p-[1px] sm:rounded-3xl sm:p-[2px]">
                   <div className="overflow-hidden rounded-[1.15rem] bg-neutral-100 shadow-[0_20px_50px_-24px_rgba(0,0,0,0.18)] ring-1 ring-black/[0.05] sm:rounded-[1.4rem]">
-                    <img
-                      src="/rathan-car-lessons.png"
-                      alt={`${SITE_NAME} — modern learner car in Liverpool`}
+                    <ResponsivePicture
+                      webpSrc="/rathan-car-lessons.webp"
+                      fallbackSrc="/rathan-car-lessons.png"
+                      alt={`${SITE_NAME} — instructor and learner in a dual-control training car on a Liverpool street`}
                       className="aspect-[16/10] w-full object-cover object-center sm:aspect-[5/4] lg:aspect-[4/3]"
-                      width={1200}
-                      height={900}
+                      width={768}
+                      height={1024}
                     />
                   </div>
                 </div>

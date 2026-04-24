@@ -5,7 +5,6 @@ import { SectionHeading } from '../components/ui/SectionHeading';
 import { AreaCard } from '../components/ui/AreaCard';
 import { AREAS_COVERED } from '../constants/areas';
 import { CTABanner } from '../components/ui/CTABanner';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { SITE_NAME } from '../constants/site';
 import { MerseysideCoverageMap } from '../components/areas/MerseysideCoverageMap';
 
@@ -14,7 +13,6 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const highlightAreas = AREAS_COVERED.slice(0, 4);
 
 export function AreasPage() {
-  usePageTitle('Areas Covered');
   const reduceMotion = useReducedMotion();
   const up = (d = 0) =>
     reduceMotion

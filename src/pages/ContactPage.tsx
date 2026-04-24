@@ -1,14 +1,17 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { Mail, Phone, MessageCircle, Facebook, Youtube, Instagram } from 'lucide-react';
 import { ContactForm } from '../components/forms/ContactForm';
+import { ResponsivePicture } from '../components/ui/ResponsivePicture';
 import { openWhatsApp } from '../utils/whatsapp';
 import { FACEBOOK_URL, YOUTUBE_URL, INSTAGRAM_URL, PHONE_NUMBER, PHONE_HREF, SITE_NAME } from '../constants/site';
-import { usePageTitle } from '../hooks/usePageTitle';
+import {
+  GOOGLE_MAPS_EMBED_SRC,
+  formatNapAddressLines,
+} from '../constants/businessAddress';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function ContactPage() {
-  usePageTitle('Contact & Book');
   const reduceMotion = useReducedMotion();
   const up = (d = 0) =>
     reduceMotion
@@ -61,14 +64,56 @@ export function ContactPage() {
               className="space-y-6 lg:col-span-2"
             >
               <div className="overflow-hidden rounded-2xl bg-white shadow-soft-lg ring-1 ring-neutral-200/70 sm:rounded-3xl">
-                <img
-                  src="/rathan-car-hero.png"
-                  alt={`${SITE_NAME} — call or message to book`}
-                  className="aspect-[4/3] w-full object-cover object-[center_42%]"
-                  width={1200}
-                  height={900}
+                <ResponsivePicture
+                  webpSrc="/rathan-car-hero.webp"
+                  fallbackSrc="/rathan-car-hero.png"
+                  alt={`${SITE_NAME} — training car with roof sign; call or message to book a lesson`}
+                  className="aspect-[4/3] w-full object-cover object-center"
+                  width={768}
+                  height={1024}
                 />
               </div>
+
+              <div>
+                <h2 className="font-display text-xl font-semibold text-black">Location &amp; contact details</h2>
+                <address className="mt-4 space-y-1 text-sm not-italic leading-relaxed text-neutral-700">
+                  <p className="font-semibold text-black">{SITE_NAME}</p>
+                  {formatNapAddressLines().map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                  <p className="pt-2">
+                    <span className="sr-only">Phone: </span>
+                    <a
+                      href={PHONE_HREF}
+                      className="font-semibold text-brand-red underline-offset-2 hover:underline focus:outline-none focus-visible:underline"
+                    >
+                      {PHONE_NUMBER}
+                    </a>
+                  </p>
+                  <p>
+                    <span className="sr-only">Email: </span>
+                    <a
+                      href="mailto:info@rathandrivingschool.co.uk"
+                      className="font-medium text-brand-red underline-offset-2 hover:underline focus:outline-none focus-visible:underline"
+                    >
+                      info@rathandrivingschool.co.uk
+                    </a>
+                  </p>
+                </address>
+                <div className="mt-6 overflow-hidden rounded-2xl border border-neutral-200/90 bg-neutral-100 shadow-sm ring-1 ring-black/[0.04]">
+                  <iframe
+                    title="Map — Rathan's Driving School service area and location reference"
+                    src={GOOGLE_MAPS_EMBED_SRC}
+                    className="aspect-video w-full min-h-[220px] border-0 sm:min-h-[280px]"
+                    width={600}
+                    height={450}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
               <h2 className="font-display text-xl font-semibold text-black">Other ways to reach us</h2>
               <ul className="mt-6 space-y-4">
                 <li>

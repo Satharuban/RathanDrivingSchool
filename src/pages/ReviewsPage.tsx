@@ -2,13 +2,11 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { TestimonialCard } from '../components/ui/TestimonialCard';
 import { TESTIMONIALS } from '../constants/testimonials';
 import { CTABanner } from '../components/ui/CTABanner';
-import { usePageTitle } from '../hooks/usePageTitle';
 import { SITE_NAME } from '../constants/site';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function ReviewsPage() {
-  usePageTitle('Reviews');
   const reduceMotion = useReducedMotion();
   const up = (d = 0) =>
     reduceMotion

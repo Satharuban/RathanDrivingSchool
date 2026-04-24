@@ -4,7 +4,7 @@ import { SectionHeading } from '../components/ui/SectionHeading';
 import { PricingCard } from '../components/ui/PricingCard';
 import { PRICING_PACKAGES } from '../constants/pricing';
 import { CTABanner } from '../components/ui/CTABanner';
-import { usePageTitle } from '../hooks/usePageTitle';
+import { ResponsivePicture } from '../components/ui/ResponsivePicture';
 import { SITE_NAME } from '../constants/site';
 import { Layers, Timer, Zap } from 'lucide-react';
 
@@ -17,7 +17,6 @@ const lessonTypes = [
 ] as const;
 
 export function LessonsPage() {
-  usePageTitle('Lessons');
   const reduceMotion = useReducedMotion();
   const up = (d = 0) =>
     reduceMotion
@@ -46,12 +45,13 @@ export function LessonsPage() {
               <div className="mx-auto max-w-lg lg:mx-0 lg:max-w-none">
                 <div className="relative rounded-[1.25rem] bg-gradient-to-br from-neutral-200/70 via-white to-neutral-100 p-[1px] sm:rounded-3xl sm:p-[2px]">
                   <div className="overflow-hidden rounded-[1.15rem] bg-neutral-100 shadow-[0_20px_50px_-24px_rgba(0,0,0,0.18)] ring-1 ring-black/[0.05] sm:rounded-[1.4rem]">
-                    <img
-                      src="/rathan-car-lessons.png"
-                      alt={`${SITE_NAME} — lesson in progress, dual-control vehicle`}
+                    <ResponsivePicture
+                      webpSrc="/rathan-car-lessons.webp"
+                      fallbackSrc="/rathan-car-lessons.png"
+                      alt={`${SITE_NAME} — driving lesson in Liverpool in a roof-signed training car`}
                       className="aspect-[16/10] w-full object-cover object-center sm:aspect-[5/4] lg:aspect-[4/3]"
-                      width={1200}
-                      height={900}
+                      width={768}
+                      height={1024}
                     />
                   </div>
                 </div>

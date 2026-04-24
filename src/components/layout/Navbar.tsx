@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { NAV_LINKS, SITE_NAME } from '../../constants/site';
+import { Menu, X, Phone } from 'lucide-react';
+import { ResponsivePicture } from '../ui/ResponsivePicture';
+import { NAV_LINKS, SITE_NAME, PHONE_HREF } from '../../constants/site';
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,9 +25,17 @@ export function Navbar() {
         scrolled ? 'border-neutral-200/80 bg-white/98 shadow-nav backdrop-blur-lg' : 'border-neutral-200/50 bg-white/90 backdrop-blur-md'
       }`}
     >
-      <nav className="container-narrow section-padding flex items-center justify-between py-4" aria-label="Main">
+      <nav className="container-narrow section-padding flex items-center justify-between gap-3 py-4" aria-label="Main">
         <Link to="/" className="flex items-center gap-3 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2">
-          <img src="/logo.png" alt={SITE_NAME} className="h-10 w-auto sm:h-12 mix-blend-darken" />
+          <ResponsivePicture
+            webpSrc="/logo.webp"
+            fallbackSrc="/logo.png"
+            alt={`${SITE_NAME} logo`}
+            width={640}
+            height={640}
+            priority
+            className="h-10 w-auto mix-blend-darken sm:h-12"
+          />
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex" role="list">
@@ -57,15 +66,27 @@ export function Navbar() {
           </Link>
         </div>
 
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          className="rounded-lg p-2.5 text-neutral-700 hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2 md:hidden"
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="ml-auto flex items-center gap-2 md:ml-0 md:hidden">
+          <a
+            href={PHONE_HREF}
+            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-neutral-200 bg-white text-brand-red shadow-sm transition hover:border-neutral-300 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2"
+            aria-label={`Call ${SITE_NAME}`}
+          >
+            <Phone className="h-5 w-5" aria-hidden />
+          </a>
+          <Link to="/contact" className="btn-primary min-h-[44px] px-4 py-2 text-sm">
+            Book
+          </Link>
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            className="rounded-lg p-2.5 text-neutral-700 hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2"
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
