@@ -21,7 +21,7 @@ import {
 } from '../../constants/site';
 
 const telE164 = '+447904960577';
-const SCHEMA_EMAIL = 'satharuban97@gmail.com';
+const SCHEMA_EMAIL = 'Rathanvalli@gmail.com';
 
 const OG_TITLE = "Driving Lessons Liverpool & Merseyside | Rathan's Driving School";
 const OG_DESCRIPTION =

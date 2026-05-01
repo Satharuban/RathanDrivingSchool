@@ -8,7 +8,7 @@ export const WHATSAPP_NUMBER = '447904960577';
 export const WHATSAPP_MESSAGE = "Hi, I'm interested in driving lessons. Can you share availability?";
 
 /** Public contact email shown on the site + used for fallbacks */
-export const CONTACT_EMAIL = 'satharuban97@gmail.com';
+export const CONTACT_EMAIL = 'Rathanvalli@gmail.com';
 
 /** Display and tel: link — UK format */
 export const PHONE_NUMBER = '+44 7904 960577';
