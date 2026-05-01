@@ -2,12 +2,40 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
-import { LESSON_TYPES } from '../../constants/site';
+import { CONTACT_EMAIL, LESSON_TYPES } from '../../constants/site';
 import { submitEnquiry, type EnquiryPayload } from '../../services/enquiryService';
+import { getWhatsAppUrl } from '../../utils/whatsapp';
+
+function enquiryManualFallback(form: EnquiryPayload, intro?: string) {
+  const subject = encodeURIComponent('Driving lesson enquiry');
+  const body = encodeURIComponent(
+    `Name: ${form.fullName}\nPhone: ${form.phone}\nEmail: ${form.email}\nPostcode: ${form.postcode}\nLesson type: ${form.lessonType}\n\nMessage:\n${form.message}\n`
+  );
+  const waMessage = `Driving lesson enquiry\n\nName: ${form.fullName}\nPhone: ${form.phone}\nEmail: ${form.email}\nPostcode: ${form.postcode}\nLesson type: ${form.lessonType}\n\nMessage:\n${form.message}`;
+  return (
+    <>
+      {intro ? <>{intro} </> : null}
+      Please{' '}
+      <a className="underline underline-offset-2" href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}>
+        email us
+      </a>{' '}
+      or{' '}
+      <a
+        className="underline underline-offset-2"
+        href={getWhatsAppUrl(waMessage)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        message on WhatsApp
+      </a>
+      .
+    </>
+  );
+}
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState<null | React.ReactNode>(null);
   const [form, setForm] = useState<EnquiryPayload>({
     fullName: '',
     phone: '',
@@ -36,21 +64,26 @@ export function ContactForm() {
     if (status === 'loading') return;
     if (!validate()) return;
     setStatus('loading');
-    setMessage('');
+    setMessage(null);
     try {
       const res = await submitEnquiry(form);
       if (res.success) {
         setStatus('success');
-        setMessage(res.message || 'Thank you! We\'ll be in touch soon.');
+        setMessage(res.message || "Thank you! We'll be in touch soon.");
         setForm({ fullName: '', phone: '', email: '', postcode: '', lessonType: '', message: '' });
         setErrors({});
       } else {
         setStatus('error');
-        setMessage(res.message || 'Something went wrong. Please try again.');
+        setMessage(
+          enquiryManualFallback(
+            form,
+            res.message || 'We could not send your enquiry automatically.'
+          )
+        );
       }
     } catch {
       setStatus('error');
-      setMessage('Something went wrong. Please try again or contact us by phone.');
+      setMessage(enquiryManualFallback(form, 'Something went wrong.'));
     }
   }
 

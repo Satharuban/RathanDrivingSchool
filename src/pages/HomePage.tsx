@@ -1,5 +1,6 @@
 import { Hero } from '../components/home/Hero';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
+import { InstructorBio } from '../components/home/InstructorBio';
 import { LessonPackages } from '../components/home/LessonPackages';
 import { HowItWorks } from '../components/home/HowItWorks';
 import { AreasCoveredSection } from '../components/home/AreasCoveredSection';
@@ -12,6 +13,7 @@ export function HomePage() {
     <>
       <Hero />
       <WhyChooseUs />
+      <InstructorBio />
       <LessonPackages />
       <HowItWorks />
       <AreasCoveredSection />

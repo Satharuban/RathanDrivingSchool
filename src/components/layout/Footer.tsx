@@ -6,6 +6,8 @@ import {
   FACEBOOK_URL,
   YOUTUBE_URL,
   INSTAGRAM_URL,
+  GOOGLE_BUSINESS_PROFILE_URL,
+  CONTACT_EMAIL,
   PHONE_NUMBER,
   PHONE_HREF,
 } from '../../constants/site';
@@ -89,9 +91,19 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@rathandrivingschool.co.uk" className="flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus-visible:underline">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus-visible:underline">
                   <Mail className="h-4 w-4 shrink-0" aria-hidden />
-                  info@rathandrivingschool.co.uk
+                  {CONTACT_EMAIL}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={GOOGLE_BUSINESS_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-white focus:outline-none focus-visible:underline"
+                >
+                  ⭐ Read our Google Reviews
                 </a>
               </li>
               <li className="flex items-start gap-2">

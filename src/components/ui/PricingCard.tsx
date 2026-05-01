@@ -16,13 +16,15 @@ export function PricingCard({ package: pkg, index = 0 }: PricingCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className={`relative flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md sm:p-8 ${
-        pkg.popular ? 'ring-2 ring-brand-red/30' : ''
+      className={`relative flex flex-col rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md sm:p-8 ${
+        pkg.popular
+          ? 'border-brand-red/40 bg-gradient-to-b from-brand-red/5 to-white ring-2 ring-brand-red/25 shadow-soft'
+          : 'border-neutral-200'
       }`}
     >
       {pkg.popular && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-red px-3 py-0.5 text-xs font-semibold text-white">
-          Popular
+        <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-red px-3 py-0.5 text-xs font-semibold text-white shadow-sm">
+          Most popular
         </span>
       )}
       <h3 className="font-display text-xl font-bold text-black">{pkg.title}</h3>

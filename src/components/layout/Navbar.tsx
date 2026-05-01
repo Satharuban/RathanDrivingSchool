@@ -34,8 +34,11 @@ export function Navbar() {
             width={640}
             height={640}
             priority
-            className="h-10 w-auto mix-blend-darken sm:h-12"
+            className="h-11 w-auto mix-blend-darken sm:h-12"
           />
+          <span className="font-display text-base font-extrabold tracking-tight text-neutral-950 sm:text-lg">
+            {SITE_NAME}
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex" role="list">

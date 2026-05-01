@@ -62,9 +62,6 @@ export function Hero() {
                   className="aspect-[4/3] w-full object-cover object-center sm:aspect-[5/4] lg:aspect-[4/3]"
                 />
               </div>
-              <p className="mt-4 text-center text-xs font-medium text-neutral-500 lg:text-left">
-                Roof sign &amp; L-plate · Your local instructor
-              </p>
             </div>
           </motion.div>
 

@@ -3,7 +3,15 @@ import { Mail, Phone, MessageCircle, Facebook, Youtube, Instagram } from 'lucide
 import { ContactForm } from '../components/forms/ContactForm';
 import { ResponsivePicture } from '../components/ui/ResponsivePicture';
 import { openWhatsApp } from '../utils/whatsapp';
-import { FACEBOOK_URL, YOUTUBE_URL, INSTAGRAM_URL, PHONE_NUMBER, PHONE_HREF, SITE_NAME } from '../constants/site';
+import {
+  CONTACT_EMAIL,
+  FACEBOOK_URL,
+  YOUTUBE_URL,
+  INSTAGRAM_URL,
+  PHONE_NUMBER,
+  PHONE_HREF,
+  SITE_NAME,
+} from '../constants/site';
 import {
   GOOGLE_MAPS_EMBED_SRC,
   formatNapAddressLines,
@@ -93,20 +101,21 @@ export function ContactPage() {
                   <p>
                     <span className="sr-only">Email: </span>
                     <a
-                      href="mailto:info@rathandrivingschool.co.uk"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="font-medium text-brand-red underline-offset-2 hover:underline focus:outline-none focus-visible:underline"
                     >
-                      info@rathandrivingschool.co.uk
+                      {CONTACT_EMAIL}
                     </a>
                   </p>
                 </address>
-                <div className="mt-6 overflow-hidden rounded-2xl border border-neutral-200/90 bg-neutral-100 shadow-sm ring-1 ring-black/[0.04]">
+                <div className="mt-6 overflow-hidden rounded-lg border border-neutral-200/90 bg-neutral-100 shadow-sm ring-1 ring-black/[0.04]">
                   <iframe
                     title="Map — Rathan's Driving School service area and location reference"
                     src={GOOGLE_MAPS_EMBED_SRC}
-                    className="aspect-video w-full min-h-[220px] border-0 sm:min-h-[280px]"
-                    width={600}
-                    height={450}
+                    width="100%"
+                    height={300}
+                    className="w-full border-0"
+                    style={{ border: 0, borderRadius: 8 }}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     allowFullScreen
@@ -129,13 +138,13 @@ export function ContactPage() {
                 </li>
                 <li>
                   <a
-                    href="mailto:info@rathandrivingschool.co.uk"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="flex items-center gap-3 rounded-xl border border-neutral-200/90 p-4 transition-colors hover:border-neutral-300 hover:bg-neutral-50/80"
                   >
                     <span className="rounded-lg bg-neutral-100 p-2 text-neutral-600">
                       <Mail className="h-5 w-5" />
                     </span>
-                    <span className="font-medium text-black">info@rathandrivingschool.co.uk</span>
+                    <span className="font-medium text-black">{CONTACT_EMAIL}</span>
                   </a>
                 </li>
                 <li>

@@ -10,7 +10,7 @@ export type RouteSeo = {
 
 export const ROUTE_META: Record<string, RouteSeo> = {
   '/': {
-    pageTitle: 'Home',
+    pageTitle: 'Driving Lessons Liverpool & Merseyside',
     description:
       "Book driving lessons in Liverpool & Merseyside with Rathan's Driving School — manual & automatic, DVSA-focused tuition. WhatsApp or call to check availability today.",
   },

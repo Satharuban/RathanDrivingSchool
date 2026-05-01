@@ -1,6 +1,7 @@
 import { SectionHeading } from '../ui/SectionHeading';
 import { TestimonialCard } from '../ui/TestimonialCard';
 import { TESTIMONIALS } from '../../constants/testimonials';
+import { GOOGLE_REVIEWS_URL } from '../../constants/site';
 
 export function TestimonialsSection() {
   return (
@@ -15,6 +16,16 @@ export function TestimonialsSection() {
           {TESTIMONIALS.slice(0, 6).map((t, i) => (
             <TestimonialCard key={t.id} testimonial={t} index={i} />
           ))}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary min-h-[44px] px-6 py-3 text-sm"
+          >
+            See all our reviews on Google →
+          </a>
         </div>
       </div>
     </section>
