@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "python3 scripts/generate-webp.py",
+    "prebuild": "python3 scripts/generate-webp.py || true",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
